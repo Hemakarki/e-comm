@@ -1,0 +1,12 @@
+
+
+.createOffer {
+    background: #ff9900 none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    font-size: 13px;
+    padding: 5px 15px;
+}
+

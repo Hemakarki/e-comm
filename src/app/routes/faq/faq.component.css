@@ -1,0 +1,34 @@
+
+.csaccord .panel-default {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    line-height: 25px;
+    border-color: #afafaf;
+}
+.csaccord .card-header {
+    background: #fff;
+}
+.csaccord .panel-heading {
+    padding: 0;
+}
+.csaccord .panel-heading .accordion-toggle {
+    padding:20px 15px;
+    background: url(../../../assets/images/uparw.png) no-repeat right;
+    font-size: 20px;
+    color: #8e8e8e;
+   
+}
+.showdisabled .input-group-addon {
+    background: #EEEEEE;
+}
+.csaccord .panel-open .panel-default, .csaccord .panel-open .panel-collapse .panel-body {
+    border-color: #ff9900;
+    color: #595959;
+    font-size: 15px;
+    line-height: 25px;
+}
+.csaccord .panel-open .accordion-toggle {
+    color: #ff9900;
+    background: url(../../../assets/images/dwnarw.png) no-repeat right;
+}

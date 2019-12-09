@@ -1,0 +1,71 @@
+<!--Start Wrapper -->
+
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">Home <i class="fa fa-angle-right"></i> View Case</p>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="myaccount"> 
+  <div class="container ">
+    <div class="info_wrapper">
+      <app-user-sidebar-menu></app-user-sidebar-menu>
+      <div class="rightbar">
+        <div class="heading">
+          <h2>View Case</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="form-group">
+              <select class="form-control">
+                <option>Sort By Date</option>
+                <option>Sort By Status</option>   
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive">
+            
+            <table class="table table-striped outerb">
+          <tr>
+            <th>Case Number</th>
+            <th>Order Number</th>
+            <th>Summary</th>
+            <th>Status</th>
+          </tr>
+                
+                
+          <tr *ngFor="let item of viewCase" [ngClass]="{active:item.status==='Close'}"  >
+            <td><a href="#">{{item.caseNumber}}</a></td>
+            <td>{{item.orderNumber}}</td>
+            <td>{{item.summary}}</td>
+            <td >{{item.status}}</td>
+          </tr>
+                
+
+        </table>
+              
+        </div>
+          
+
+        <nav aria-label="Page navigation"class="pull-right" >
+          <ul class="pagination">
+            <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+            <li class="active" ><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+          </ul>
+        </nav>
+          
+          
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Wrapper --> 

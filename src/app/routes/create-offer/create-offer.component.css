@@ -1,0 +1,86 @@
+.create {
+    background: #ff9900;
+    border: none;
+    padding: 15px 50px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+.dimensions {
+    font-size: 11px;
+    font-style: italic;
+}
+.createdOffer {
+    border: 1px solid #c3c3c3;
+    float: left;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.offerimage {
+    float: left;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.offerimage img {
+    max-width: 100%;
+}
+.withimage .offerName {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 15px;
+    padding: 7px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.withoutimage .offerName {
+    position: relative;
+}
+.offerContent {
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 8px 0;
+    display: inline-block
+}
+
+.offerPrice {
+    float: left; width:100%; 
+}
+
+
+.offerPrice .before {
+    font-size: 21px;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #7f7f7f;
+    float: left;
+}
+
+
+.offerPrice .current {
+    font-size: 21px;
+    font-weight: 400;
+    float: right;
+}
+
+.mrgbtm { margin-bottom: 30px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

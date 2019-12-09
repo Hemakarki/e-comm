@@ -1,0 +1,434 @@
+.main_btn a {
+    border-radius: 3px;
+    color: #fff;
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    text-align: center;
+    width: 100%;
+}
+.main_btn a:hover {
+    text-decoration: none;
+}
+.addtocart {
+    background: #1b438f;
+}
+.bidnow {
+    background: #ff9900;
+}
+.addtocart:hover {
+    background: #173877;
+}
+.bidnow:hover {
+    background: #e68a00;
+}
+.bid_now_holder {
+    background: #f7f7f7;
+    float: left;
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    box-shadow: 0 9px #dbdbdb;
+    position: relative;
+    margin-bottom: 25px;
+}
+.current_price, .currentbidnow{
+        padding: 10px;
+    float: left; width:100%;
+    display: none;
+}
+.current_price, .currentbidnow.active{
+    display: block;
+     transition: all 15s ease;
+}
+
+.wauto {
+    width: auto;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 2px;
+}
+.wauto label {
+    font-size: 13px;
+    color: #555555;
+    margin: 0 0 8px 0;
+    font-weight: 200;
+}
+.wauto h4 {
+    font-size: 24px;
+    color: #555555;
+    margin: 0;
+    font-weight: 500;
+}
+.asking_price h4 {
+    color: #ff9900;
+}
+.highestbid h4 {
+    color: #676767;
+}
+.timeleft h4 {
+    color: #f73d3d;
+}
+.btnhd {
+    width: 175px;
+    float: right;
+}
+.bid_now {
+    background: #ff9900;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 15px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.bid_now:hover {
+    background: #f39303;
+}
+
+.bid_now.active { background: #dedede;}
+
+.my_bid {
+    background: #309f16;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 15px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}
+.my_bid:hover {
+    background: #2c9114;
+}
+
+
+.addtocart {
+    background: #1b438f;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 15px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}
+.addtocart:hover {
+    background: #193d81;
+}
+
+
+
+
+
+
+.sel_quan_warhse {
+    width: 70%;
+    float: left;
+}
+.sel_quan_warhse .form-group {
+    margin-bottom: 0;
+}
+.sel_quan_warhse .form-group select {
+    border: 1px solid #afafaf;
+    border-radius: 3px;
+    padding: 7px 10px;
+}
+.other_info {
+    float: left;
+    width: 100%;
+    margin: 0px 0
+}
+.other_info p {
+    margin-bottom: 5px;
+}
+.other_info span {
+    color: #a2a2a2;
+    width: 32%;
+    display: inline-block
+}
+.other_info span + span {
+    color: #333;
+    display: inline-block;
+    width: auto;
+}
+.product {
+    margin: 0 10px;
+    outline: none;
+}
+.product_des {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+.slick-arrow {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    border: none;
+    text-indent: -9999px
+}
+.heading h2 {
+    padding: 0 10px;
+}
+.slick-next {
+    right: 10px;
+    background: url(../../../assets/images/right_arw.png) no-repeat;
+    width: 32px;
+    height: 32px;
+}
+.slick-prev {
+    right: 50px;
+    background: url(../../../assets/images/left_arw.png) no-repeat;
+    width: 32px;
+    height: 32px;
+}
+
+
+
+.allinfo {
+    float: left;
+    width: 100%;
+    margin: 0px 0;
+}
+
+.allinfo h2 {
+    font-size: 20px; font-weight:400; color: #000; border-bottom: 3px solid #ff9900; float: left;
+    padding-bottom: 8px;
+    margin-bottom:20px;
+}
+
+/*.allinfo .nav-tabs li a {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333
+}
+.allinfo .tab-content {
+    padding: 20px 0;
+}
+.allinfo .tab-content p {
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+}
+
+*/
+
+
+.read_write {
+    border-radius: 20px;
+    color: #fff;
+    float: left;
+    margin-right: 10px;
+    padding: 6px 20px;
+    background: #ff9900;
+    margin: 20px 0;
+}
+.write_review {
+    background: #f6f6f5 none repeat scroll 0 0;
+  /*  box-shadow: 0 0 14px -8px #000; */
+    float: left;
+    padding: 20px 20px 10px 20px;
+    width: 100%;
+    display: none;
+}
+
+.write_review.active {
+    display: block;
+}
+
+.write_review textarea {
+    resize: vertical
+}
+.read_write:hover, .read_write:focus {
+    color: #fff;
+    text-decoration: none;
+    background: #e48b04;
+}
+.submit_review {
+    float: left;
+    padding: 10px 40px;
+    background: #1b438f;
+    margin: 0;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+}
+.your_reviews {
+    float: left;
+    width: 100%;
+    margin: 30px 0 25px 0;
+}
+.your_reviews .review {
+    border: 1px solid #e6e6e6;
+    float: left;
+    width: 100%;
+    padding: 20px;
+    margin-top: -1px
+}
+.your_reviews .review .hdng {
+    font-size: 16px;
+    font-weight: 800;
+}
+.your_reviews .review .hdng span {
+    font-size: 13px;
+    font-weight: 200;
+    background: #ff9900;
+    color: #fff;
+    padding: 0px 7px;
+    border-radius: 3px;
+}
+.your_reviews .review .hdng span.by {
+    background: none;
+    color: #333;
+}
+
+.cu_rating { font-size:30px; margin-left: 20px; color: #ff9900; }
+
+
+.currentbidnow {
+    background:#fff;
+    float: left;
+    width:100%;
+    transition: all 15s ease;
+}
+
+.rfq .sel_quan_warhse{
+    width: 60%;
+}
+
+
+
+
+.rfq .btnhd{
+    width: 235px;
+}
+
+
+
+.rfq .addtocart {
+    background: #232f3f;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 15px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}
+.rfq .addtocart:hover {
+    background: #1b2431;
+}
+
+
+.slick-dots { display:none !important;}
+
+.out_of_stock {
+    float: left;
+    width:100%;
+}
+
+.out_of_stock h3{
+    font-size: 33px;
+    color: #f73d3d;
+    margin: 0 0 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1200px) {
+.sel_quan_warhse, .rfq .sel_quan_warhse {
+    width: 100%;
+    float: left;
+}
+.asking_price {
+    width: 30%;
+}
+.highestbid {
+    width: 30%;
+}
+.timeleft {
+    width: 40%;
+    margin: 0;
+}
+.wauto {
+    margin: 0;
+}
+.btnhd, .rfq .btnhd {
+    width: 100%;
+    margin-top: 10px;
+}
+.wauto h4 {
+    font-size: 20px;
+}
+}
+
+@media (max-width:820px) {
+.wauto h4 {
+    font-size: 18px;
+}
+}
+
+@media (max-width:400px) {
+.big_pro_img {
+    min-height: 220px;
+}
+.pro_sm_img {
+    height: 40px;
+}
+.forcfull {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.wauto {
+    margin-bottom: 10px;
+}
+.asking_price {
+    width: 50%;
+}
+.highestbid {
+    width: 50%;
+}
+.timeleft {
+    width: 100%;
+    margin: 0;
+}
+.wauto h4 {
+    font-size: 18px;
+}
+}

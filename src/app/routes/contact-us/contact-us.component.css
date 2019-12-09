@@ -1,0 +1,30 @@
+
+.input-group-addon {
+    border-color: #afafaf;
+    background: #fff
+}
+.cstextarea.form-control {
+    border-color: #afafaf;
+    min-height: 150px;
+}
+.cstextarea {
+    border-radius: 0 0 3px 3px;
+    resize: vertical;
+    margin-top: -1px;
+}
+.input-group.addtextarea .form-control {
+    border-radius: 0 3px 0 0 !important;
+}
+.input-group.addtextarea .input-group-addon {
+    border-radius: 3px 0 0 0 !important;
+}
+
+
+.input-group .form-control { border-radius:0 3px 3px 0 !important;}
+
+.showdisabled .form-control { cursor: context-menu; }
+
+.showdisabled .input-group-addon { background:#eee;}
+
+
+

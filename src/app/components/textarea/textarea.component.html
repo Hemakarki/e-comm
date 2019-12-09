@@ -1,0 +1,5 @@
+<textarea placeholder="{{ labelName }}" class="form-control cstextarea" name="msgname"  #field="ngModel" ngModel ></textarea>
+
+<div *ngIf="field.errors && (field.dirty || field.touched)" class="alert alert-danger">
+   <div [hidden]="!field.errors.required">{{errormessage}} </div>
+</div>

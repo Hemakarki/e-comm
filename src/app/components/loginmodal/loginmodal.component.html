@@ -1,0 +1,39 @@
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" novalidate>
+<!--  <div *ngIf="data" class="alert alert-success displaymessage" role="alert">
+    {{data.message}}
+  </div> -->
+  <div *ngIf="errors.message" class="alert alert-danger displaymessage" role="alert" >
+    {{errors.message}}
+  </div>
+  <div ngModelGroup="loginInfo" #loginCtrl="ngModelGroup">
+    <div class="col-md-6 col-sm-6"> <a href="" class="gle scbtn"> <i class="fa fa-google "></i> Google </a> </div>
+    <div class="col-md-6 col-sm-6"> <a href="" class="fb scbtn"> <i class="fa fa-facebook"></i> Facebook </a> </div>
+    <div class="col-md-12 col-sm-12">
+      <div class="form-group ">
+        <div class="input-group"> <span class="input-group-addon"><img src="../../../assets/images/username.png" alt=""></span>
+
+          <input type="text" #usernameRef="ngModel" placeholder="Username" [(ngModel)]="username" name="username" class="form-control csinput"
+            required>  
+
+        </div>
+        <span *ngIf="usernameRef.errors && (usernameRef.dirty || usernameRef.touched)" class="error alert-danger">
+            <span [hidden]="!usernameRef.errors.required"> Please enter a User Name. </span>
+        </span>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <div class="form-group ">
+        <div class="input-group"> <span class="input-group-addon"><img src="../../../assets/images/password.png" alt=""></span>
+
+           <input type="password" #passwordRef="ngModel" placeholder="Password" class="form-control csinput" name="password" 
+            ngModel>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <input type="submit" [disabled]="!loginForm.form.valid" class="login_btn btn action_btn" value="Login"  >
+
+    </div>
+  </div>
+</form>

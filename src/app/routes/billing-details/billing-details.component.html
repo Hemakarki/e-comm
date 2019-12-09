@@ -1,0 +1,147 @@
+<!-- breadcumb -->
+
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">Home <i class="fa fa-angle-right"></i> Billing Details</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Breadcumb --> 
+
+<!-- steps -->
+
+<div class="fullw">
+<div class="container">
+  <div class="allsteps">
+    <div class="row">
+      <div class="col-md-12">
+          <div class="step first active"><p><span>1</span> <span class="text_hide" >Billing Details</span></p></div>
+        <div class="step "><p><span>2</span> <span class="text_hide" >My Orders</span></p></div>
+        <div class="step"><p><span>3</span> <span class="text_hide" >Check Out</span></p></div>
+        <div class="step last"><p><span>4</span> <span class="text_hide" >Thank You</span></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>    
+
+<!-- steps -->
+
+<section class="wrapper billing ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-7">
+        <div class="inner_hold">
+          <div class="heading">
+            <h2>Billing Details</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label>First Name</label>
+                <input class="form-control csinput" type="text" >
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label>Last Name</label>
+                <input class="form-control csinput" type="text" >
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label>Email Address</label>
+                <input class="form-control csinput" type="text" >
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label>Contact Number</label>
+                <input class="form-control csinput" type="text" >
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Company Name</label>
+                <input class="form-control csinput" type="text" >
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Address</label>
+                <input class="form-control csinput" type="text" >
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label>Country</label>
+                <select class="form-control csinput" >
+                  <option>ABC</option>
+                  <option>XYZ</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label>State</label>
+                <select class="form-control csinput" >
+                  <option>ABC</option>
+                  <option>XYZ</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label>City</label>
+                <input class="form-control csinput" type="text" >
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <label>Zip</label>
+                <input class="form-control csinput" type="text" >
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>
+                  <input class="" type="checkbox" >
+                  Ship to different address </label>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Order Notes</label>
+                <textarea class="form-control ordnote"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-5">
+        <div class="inner_hold">
+        
+         <div class="heading">
+            <h2>Price Details</h2>
+          </div>
+            
+          <div class="price_detail">
+            <p> <span>Subtotal</span> <span class="sbtotal">$7240.00</span> </p>
+            <p> <span>Shipping</span> <span>$200.00</span> </p>
+            <p> <span>Tax</span> <span>$0.00</span> </p>
+          </div>
+            
+          <div class="ttprice">
+            <p> <span>Total</span> <span>$7440.00</span> </p>
+          </div>
+            
+        </div>
+        <button class="contbtn" [routerLink]="['/my-orders']" >Continue</button>
+      </div>
+    </div>
+  </div>
+</section>

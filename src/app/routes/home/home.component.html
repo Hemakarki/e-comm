@@ -1,0 +1,63 @@
+<!--Start Banner -->
+
+<section class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-md-12 col-sm-12">
+        <carousel>
+          <slide *ngFor="let item of bannerInfo">
+            <app-banner class="active" [bannerInfo]="bannerInfo" [imgPath]="item.imagePath"
+              [productName]="item.productName" [bannerTitle]="item.bannerTitle" [percentageOff]="item.percentageOff"
+              [productLine]="item.productLine"> </app-banner>
+          </slide>
+        </carousel>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 hideinmob hide_in_tab">
+        <app-banner-video></app-banner-video>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Banner -->
+
+<!--Start Wrapper -->
+<section class="wrapper">
+  <div class="container">
+    <section class="pro_block">
+      <div class="heading">
+        <h2>Most viewed products</h2>
+        <a href="" class="viewall">View all</a>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-6 tofw" *ngFor="let item of productInfo">
+          <app-product [routerLink]="['/product-detail']" [productInfo]="productInfo" [imgPath]="item.imagePath"
+            [productName]="item.productName" [productPrice]="item.productPrice" [averageRating]="item.averageRating"
+            [totalReview]="item.totalReview" [totalRating]="item.totalRating"> </app-product>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="pro_block">
+      <div class="heading">
+        <h2>Featured products </h2>
+        <a href="" class="viewall">View all</a> </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-6 tofw" *ngFor="let item of productInfo">
+          <app-product [routerLink]="['/product-detail']" [productInfo]="productInfo" [imgPath]="item.imagePath" [productName]="item.productName"
+            [productPrice]="item.productPrice" [averageRating]="item.averageRating" [totalReview]="item.totalReview" [totalRating]="item.totalRating"> </app-product>
+        </div>
+      </div>
+    </section>
+    <section class="pro_block">
+      <div class="heading">
+        <h2>BULK INVENTORY DISCOUNTED SALE</h2>
+        <a href="" class="viewall">View all</a> </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-6 tofw" *ngFor="let item of productInfo">
+          <app-product [routerLink]="['/product-detail']" [imgPath]="item.imagePath" [productName]="item.productName"
+            [productPrice]="item.productPrice" [averageRating]="item.averageRating" [totalReview]="item.totalReview" [totalRating]="item.totalRating"> </app-product>
+        </div>
+      </div>
+    </section> -->
+  </div>
+</section>
+<!--End Wrapper -->

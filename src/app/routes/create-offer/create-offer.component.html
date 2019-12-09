@@ -1,0 +1,101 @@
+<!--Start Wrapper -->
+
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">Home <i class="fa fa-angle-right"></i> Create Offer</p>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="myaccount">
+  <div class="container ">
+    <div class="info_wrapper">
+      <app-vendor-sidebar-menu></app-vendor-sidebar-menu>
+      <div class="rightbar">
+        <div class="heading">
+          <h2>Create Offer</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-7 mrgbtm" >
+            <div class="block">
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <label>Offer Name</label>
+                    <input type="text" required class="form-control csinput" >
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                  <div class="form-group">
+                    <label>Offer Description</label>
+                    <input type="text" required class="form-control csinput" >
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <label>Current Price <span>(optional)</span></label>
+                    <input type="text" required class="form-control csinput" >
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <label>Offer Price <span>(optional)</span></label>
+                    <input type="text" required class="form-control csinput" >
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                  <div class="form-group">
+                    <label>Add Offer Image <span>(optional)</span></label>
+                    <div class="fakeuploader">
+                      <div class="add">
+                        <input type="file">
+                        <span>Add</span> </div>
+                      <input type="text" required class="form-control csinput" >
+                    </div>
+                    <i class="dimensions" >Image dimensions should be 200x150 and size should not be more than 3MB</i> </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <label>Offer Start Date </label>
+                    <input type="date" required class="form-control csinput" >
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <label>Offer End Date <span>(optional)</span></label>
+                    <input type="text" required class="form-control csinput" >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          <div class="col-md-5" > 
+            
+            <!-- withimage class and withoutimage class will use according offer image-->
+            
+            <div class="createdOffer withimage ">
+              <div class="offerimage"> <img src="../../../assets/images/pro2.png" alt="" >
+                <div class="offerName">Offer Name</div>
+              </div>
+              <p class="offerContent">offer description content will display here</p>
+              <div class="offerPrice"> <span class="before">$550.00</span> <span class="current">$250.00</span> </div>
+            </div>
+          </div>
+            
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="form-group">
+              <button class="create" >Create Offer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Wrapper --> 
+

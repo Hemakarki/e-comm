@@ -1,0 +1,38 @@
+
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">Home <i class="fa fa-angle-right"></i> faq</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Start Wrapper -->
+
+<section class="wrapper inner">
+  <div class="container pad20">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading">
+          <h2> Frequently Asked Questions</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 csaccord">
+        <accordion [closeOthers]="oneAtATime"  >
+          <accordion-group heading="{{Question}}">
+            <p>{{Answer}}</p>
+          </accordion-group>
+          <accordion-group heading="{{Question}}">
+            <p>{{Answer}}</p>
+          </accordion-group>
+        </accordion>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--End Wrapper --> 

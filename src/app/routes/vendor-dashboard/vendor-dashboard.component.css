@@ -1,0 +1,11 @@
+.savebtn {
+    background: #ff9a03 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    float: left;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 10px 0;
+    padding: 0 40px;
+}

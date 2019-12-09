@@ -1,0 +1,121 @@
+<!-- breadcumb -->
+
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">Home <i class="fa fa-angle-right"></i> Billing Details <i class="fa fa-angle-right"></i> My Orders <i class="fa fa-angle-right"></i>Check Out</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Breadcumb -->
+
+<!-- steps -->
+
+<div class="fullw">
+  <div class="container">
+    <div class="allsteps">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="step first active">
+            <p><span>1</span> <span class="text_hide">Billing Details</span></p>
+          </div>
+          <div class="step active">
+            <p><span>2</span> <span class="text_hide">My Orders</span></p>
+          </div>
+          <div class="step active">
+            <p><span>3</span> <span class="text_hide">Check Out</span></p>
+          </div>
+          <div class="step last">
+            <p><span>4</span> <span class="text_hide">Thank You</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- steps -->
+
+<section class="wrapper billing ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <div class="inner_hold">
+          <div class="heading">
+            <h2>Check Out</h2>
+          </div>
+
+          <div class="box">
+            <div class="hding">
+              <h3>Shipping Detail</h3>
+              <span class="edit" [routerLink]="['/billing-details']" >Edit</span>
+            </div>
+
+            <div class="selected_address">
+              #2411/1, Sector 40, chandigarh. 160036
+            </div>
+          </div>
+
+
+          <div class="box">
+            <div class="hding">
+              <h3>My Orders</h3>
+              <span class="edit" [routerLink]="['/my-orders']">Edit</span>
+            </div>
+
+            <div class="all_orders">
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                  <tr>
+                    <th>Particular Name</th>
+                    <th class="center">Qty</th>
+                    <th class="right">Price</th>
+                  </tr>
+                  <tr>
+                    <td>SKYTRONICS JASCO. 6560-1 ALTERNATOR KIT</td>
+                    <td class="center">2</td>
+                    <td align="right">$5245.00</td>
+                  </tr>
+                  <tr>
+                    <td>SKYTRONICS JASCO. 6560-1 ALTERNATOR KIT</td>
+                    <td class="center">2</td>
+                    <td align="right">$5245.00</td>
+                  </tr>
+                  <tr>
+                    <td>SKYTRONICS JASCO. 6560-1 ALTERNATOR KIT</td>
+                    <td class="center">2</td>
+                    <td class="right">$5245.00</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="total_hglt">
+                <div class="ttx">
+                  <p>Tax <span>$40.00</span> </p>
+                </div>
+                <div class="ttl">
+                  <p>Total <span>$7440.00</span> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="hding">
+              <h3>Payment Method</h3>
+            </div>
+
+            
+              <app-payment-method></app-payment-method>
+            
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

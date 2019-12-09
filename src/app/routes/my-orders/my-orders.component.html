@@ -1,0 +1,114 @@
+<!-- breadcumb -->
+
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">Home <i class="fa fa-angle-right"></i> Billing Details <i class="fa fa-angle-right"></i> My Orders</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Breadcumb --> 
+
+<!-- steps -->
+
+<div class="fullw">
+  <div class="container">
+    <div class="allsteps">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="step first active">
+            <p><span>1</span> <span class="text_hide" >Billing Details</span></p>
+          </div>
+          <div class="step active">
+            <p><span>2</span> <span class="text_hide" >My Orders</span></p>
+          </div>
+          <div class="step">
+            <p><span>3</span> <span class="text_hide" >Check Out</span></p>
+          </div>
+          <div class="step last">
+            <p><span>4</span> <span class="text_hide" >Thank You</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- steps -->
+
+<section class="wrapper billing ">
+  <div class="container">
+      
+    <div class="row">
+        
+      <div class="col-md-8 col-sm-7">
+        <div class="inner_hold">
+          <div class="heading">
+            <h2>My Orders</h2>
+          </div>
+          <div class="wish_holder" *ngFor="let item of myOrder" >
+            <div class="product_image"><img src="{{item.procuctImage}}" alt=""></div>
+            <div class="product_info">
+              <h2 >{{item.productName}}</h2>
+              <div class="pro_quantity">
+                <button class="inc" type="button" (click)="decrement()"><img src="../../../assets/images/minus.png" alt="" ></button>
+                <input type="text" class="form-control" value="{{totalValue}}" >
+                <button class="dec" type="button" (click)="increment()"  ><img src="../../../assets/images/plus.png" alt="" ></button>
+              </div>
+              <div class="select_payment">
+                <div class="form-group">
+                  <label>Full Payment</label>
+                  <label class="plabel" >
+                    <input type="radio" name="price" >
+                    {{item.fullPayment}}</label>
+                </div>
+                <div class="form-group">
+                  <label>Deposit  Payment</label>
+                  <label class="plabel" >
+                    <input type="radio" name="price" >
+                    {{item.depositPayment}}</label>
+                </div>
+              </div>
+              <div class="otinfo" >
+                <p>Part No: <span>DGJ353-2</span></p>
+                <p>Part Condition: <span>New</span></p>
+                <p>Expected Delivery On: <span>12/07/2017</span></p>
+              </div>
+              <div class="clearfix"></div>
+              <div class="row">
+                <div class="col-md-4 col-sm-4  col-xs-6 ">
+                  <button class="mtwhlist trntotxt"> <img src="../../../assets/images/wishlist.png" alt="" > Move to Wishlist </button>
+                </div>
+                <div class="col-md-4  col-sm-4 col-xs-6">
+                  <button href="#" class="remove trntotxt"> <img src="../../../assets/images/delete.png" alt="" > Remove Now </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="col-md-4 col-sm-5">
+        <div class="inner_hold">
+          <div class="heading">
+            <h2>Price Details</h2>
+          </div>
+          <div class="price_detail">
+            <p> <span>Subtotal</span> <span class="sbtotal">$7240.00</span> </p>
+            <p> <span>Shipping</span> <span>$200.00</span> </p>
+            <p> <span>Tax</span> <span>$0.00</span> </p>
+          </div>
+          <div class="ttprice">
+            <p> <span>Total</span> <span>$7440.00</span> </p>
+          </div>
+        </div>
+        <button class="contbtn" [routerLink]="['/check-out']" >Continue</button>
+      </div>
+        
+    </div>
+      
+  </div>
+</section>

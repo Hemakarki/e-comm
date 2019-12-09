@@ -1,0 +1,143 @@
+.proname {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 27px 0;
+}
+.bid_now_holder {
+    background: #f7f7f7;
+    float: left;
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    box-shadow: 0 9px #dbdbdb;
+    position: relative;
+    margin-bottom: 25px;
+}
+.current_price, .currentbidnow {
+    padding: 10px;
+    float: left;
+    width: 100%;
+    display: none;
+}
+.current_price, .currentbidnow.active {
+    display: block;
+    transition: all 15s ease;
+}
+.wauto {
+    width: auto;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 2px;
+}
+.wauto label {
+    font-size: 13px;
+    color: #555555;
+    margin: 0 0 8px 0;
+    font-weight: 200;
+}
+.wauto h4 {
+    font-size: 24px;
+    color: #555555;
+    margin: 0;
+    font-weight: 500;
+}
+.asking_price h4 {
+    color: #ff9900;
+}
+.highestbid h4 {
+    color: #676767;
+}
+.timeleft h4 {
+    color: #f73d3d;
+}
+.btnhd {
+    width: 175px;
+    float: right;
+}
+.bid_now {
+    background: #2fa014;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 15px 10px;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}
+.bid_now:hover {
+    background: #299011;
+}
+.bid_now.active {
+    background: #299011;
+}
+.all_bids {
+    float: left;
+    width: 100%;
+}
+.outerb button {
+    border: none;
+    background: none;
+    margin: 0 10px;
+}
+.outerb .acttion {
+    text-align: center;
+    width: 350px;
+}
+
+@media (max-width:1200px) {
+    .asking_price {
+        width: 30%;
+    }
+    .highestbid {
+        width: 30%;
+    }
+    .timeleft {
+        width: 40%;
+        margin: 0;
+    }
+    .wauto {
+        margin: 0;
+    }
+    .btnhd, .rfq .btnhd {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .wauto h4 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:820px) {
+    .wauto h4 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:400px) {
+    .big_pro_img {
+        min-height: 220px;
+    }
+    .pro_sm_img {
+        height: 40px;
+    }
+    .forcfull {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .wauto {
+        margin-bottom: 10px;
+    }
+    .asking_price {
+        width: 50%;
+    }
+    .highestbid {
+        width: 50%;
+    }
+    .timeleft {
+        width: 100%;
+        margin: 0;
+    }
+    .wauto h4 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,198 @@
+<!--Start Banner -->
+<section class="banner">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-9 col-md-12 col-sm-12">
+                <carousel>
+                    <slide *ngFor="let item of bannerInfo">
+                        <app-banner class="active" [bannerInfo]="bannerInfo" [imgPath]="item.imagePath" [productName]="item.productName" [bannerTitle]="item.bannerTitle"
+                            [percentageOff]="item.percentageOff" [productLine]="item.productLine">
+                        </app-banner>
+                    </slide>
+                </carousel>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 hideinmob hide_in_tab">
+                <app-banner-video></app-banner-video>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--End Banner -->
+
+
+<!--Start Wrapper -->
+<section class="wrapper">
+    <div class="container">
+
+        <div class="search_pannel">
+
+            <div class="row">
+
+                <div class="col-md-5 col-sm-5">
+                    <label class="mhd">Search</label>
+                    <div class="deco">
+                        <div class="col-md-12 ">
+                            <div class="form-group">
+                                <label>Search</label>
+                                <input type="text" required class="form-control csinput" placeholder="Search Part">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="filter">Filter Your Search By:</h3>
+
+                    <div class="deco filter_Select">
+                        <div class="col-md-4 ">
+                            <div class="form-group">
+                                <label>Lead Time</label>
+                                <select class="form-control csinput">
+                                   <option>12 hours</option>
+                                   <option>24 hours</option>
+                               </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            <div class="form-group">
+                                <label>Condition</label>
+                                <select class="form-control csinput">
+                                   <option>Excellent</option>
+                                   <option>Average</option>
+                               </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            <div class="form-group">
+                                <label>OEM</label>
+                                <select class="form-control csinput">
+                                   <option>Boeing</option>
+                                   <option>Boeing</option>
+                               </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 "> <label class="filter_label"> <input type="checkbox"> Available for Exchange  </label> </div>
+
+                        <div class="col-md-6 "> <label class="filter_label"> <input type="checkbox">Repairable products </label> </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-7 col-sm-7">
+
+                    <label class="mhd">Search Multiple Part</label>
+
+                    <div class="deco">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Search Multiple Part</label>
+
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" required class="form-control csinput" placeholder="Part Number">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" required class="form-control csinput" placeholder="Part Number">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" required class="form-control csinput" placeholder="Part Number">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" required class="form-control csinput" placeholder="Part Number">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" required class="form-control csinput" placeholder="Part Number">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <div class="fileholder">
+                                                <input type="file" class="">
+                                                <span>Upload List</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <p class="download_file">Download <span class="dwn">.xls</span> list Import Template</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-12">
+
+                                        <button type="submit" class="search_multi">Search</button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row ptb">
+
+            <div class="col-md-3 col-sm-4 col-xs-6 tofw" *ngFor="let item of productInfo">
+
+                <div class="product">
+                    <div class="proimg"><img src="{{ item.imagePath }}" alt="{{ item.productName }} image"></div>
+                    <p class="name">{{ item.productName }}</p>
+                    <div class="pno">
+                        <p><span>OEM Part No:</span> 4243-33</p>
+                        <p><span>Part No:</span> DGJ353-2</p>
+
+                    </div>
+                    <p class="rating"><span>{{ item.averageRating }}</span> {{ item.totalRating }} Ratings & {{ item.totalReview}} Reviews
+                    </p>
+                    <p class="price">{{ item.productPrice }}</p>
+
+                    <div class="act_btn">
+
+                        <div class="cart">
+                            <img src="../../../assets/images/cart.svg" alt="">
+                            <span>Add to Cart</span>
+                        </div>
+
+                        <div class="bid">
+                            <img src="../../../assets/images/hammer.svg" alt="">
+                            <span>Bid Now</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

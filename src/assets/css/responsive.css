@@ -1,0 +1,232 @@
+
+
+@media (min-width:900px) {
+    .carousel-item img {
+        width:100%;
+    }
+}
+
+
+@media (max-width:1199px) {
+.othlinks li a.my_cart {
+    width: auto;
+}
+.othlinks > li > a, .othlinks > li > span {
+    font-size: 15px;
+    padding: 5px 8px;
+}
+.custom_nav ul.navbar-nav > li > a {
+    padding: 5px 9px;
+}
+.thbtns a {
+    margin-right: 5px;
+}
+.main_btn a {
+    font-size: 18px;
+}
+
+    .hide_in_tab{
+        display:none;
+    }    
+    
+}
+
+@media (max-width: 991px) {
+.wrapper.inner {
+    padding: 0 15px
+}
+.logo {
+    width: 120px;
+}
+.stw {
+    width: auto;
+}
+.container {
+    width: 100%;
+}
+}
+
+@media (max-width: 767px) {
+
+    .form-group {
+        position: relative;
+    }
+    
+    .alert-danger { bottom: -16px;  }
+
+    .othlinks li { 
+        text-align: center;
+    }
+    
+.modal-dialog.search_mutiple_popup {
+    margin: 20px auto 0;
+    width: 300px;
+}
+.search_mutiple_popup .modal-title {
+    font-size: 18px;
+}
+.text_hide {
+    display: none;
+}
+.login_popup {
+    width: 400px;
+    margin: auto;
+}
+.login_popup .close {
+    color: #FF9900;
+    border: 2px solid #FF9900;
+}
+.right_content {
+    display: none;
+}
+.login_popup .left_form {
+    width: 100%;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+    color: #ff9a03;
+}
+.sidebar ul li a {
+    color: #fff;
+}
+.info_wrapper {
+    padding: 0;
+}
+.sidebar {
+    display: none;
+}
+.menu_icon {
+    display: block;
+}
+.menu_icon .mn_icon {
+    display: block;
+}
+.menu_icon .cl_icon {
+    display: none;
+}
+.menu_icon.active .mn_icon {
+    display: none;
+}
+.menu_icon.active .cl_icon {
+    display: block;
+}
+.sidebar.active {
+    display: block;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    background: #1c438d;
+    z-index: 1;
+    top: -40px;
+    border-radius: 10px 0 10px 10px;
+    overflow: hidden;
+}
+.pro_sm_img {
+    height: 60px;
+}
+.othlinks li a.my_cart {
+    width: 100%;
+}
+.hideinwebtab {
+    display: block;
+}
+.navbar-nav {
+    margin: 0;
+}
+.custom_nav ul.navbar-nav li.stw > a {
+    padding-left: 15px;
+}
+.hideinmob {
+    display: none;
+}
+.othlinks {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 5px 4px;
+}
+.othlinks > li {
+    width: 25%;
+    float: left;
+}
+.othlinks > li a {
+    text-align: center;
+}
+.fullinmob {
+    width: 100%;
+}
+.sltlng .open.dropdown-menu {
+    position: absolute;
+    background: #fff;
+}
+.custom_nav ul.navbar-nav > li > a {
+    padding: 5px 15px;
+}
+.custom_nav .navbar-toggle {
+    margin-right: 0;
+}
+.navbar-brand {
+    padding-left: 0;
+    padding-right: 0;
+}
+.copyright p {
+    margin: 10px 0;
+    text-align: center;
+}
+.footer h2 {
+    font-size: 15px;
+    margin: 20px 0 10px 0;
+    letter-spacing: 1px;
+}
+.footer ul li {
+    border: 1px solid #1c2632;
+    margin-left: -1px;
+    margin-top: -1px;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.det .icon_info {
+    position: relative;
+    left: auto;
+}
+}
+
+@media (max-width:560px) {
+.pro_block h2 {
+    font-size: 18px;
+    width: 65%;
+}
+    
+    .banner .carousel-caption h2 {
+        font-size:35px;
+    }
+    
+}
+
+@media (max-width:420px) {
+.othlinks > li.mc-icon {
+    width: 43px;
+}
+.othlinks > li > a, .othlinks > li > span {
+    font-size: 13px;
+}
+.othlinks > li {
+    width: 31%;
+}
+.tofw {
+    width: 100%;
+}
+.login_popup {
+    width: 90%;
+}
+.login_popup .left_form {
+    padding: 20px 20px;
+}
+.login_btn {
+    width: 100%;
+}
+}

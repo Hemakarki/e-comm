@@ -1,0 +1,145 @@
+.deco {
+    float: left;
+    width: 100%;
+    background: #ececec;
+    padding: 10px 0 0 0
+}
+
+.search_pannel {
+    float: left;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.search_pannel .mhd {
+    font-size: 20px;
+    color: #202020;
+    font-weight: 400;
+}
+
+.search_pannel label {
+    color: #555555;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.search_multi {
+    background: #1d3f7e;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    color: #ffffff;
+    font-size: 17px;
+    border-radius: 3px;
+}
+
+.download_file {
+    font-size: 14px;
+    color: #a0a0a0;
+    text-align: right;
+    margin: -5px 0 5px 0;
+    float: left;
+    width: 100%;
+}
+
+.download_file .dwn {
+    color: #20b31d;
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+.fileholder {
+    position: relative;
+    background: #ff9900;
+    border-radius: 3px;
+    line-height: 45px;
+    overflow: hidden
+}
+
+.fileholder input[type="file"] {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+}
+
+.fileholder span {
+    color: #fff;
+    cursor: pointer;
+    left: 0;
+    line-height: 45px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 0;
+}
+
+.fileholder input[type="file"]:hover {
+    cursor: pointer;
+}
+
+.filter {
+    color: #ff9900;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 4px 0 6px;
+    width: 100%;
+}
+
+.filter_label input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+label.filter_label {
+    font-size: 15px !important;
+    color: #000 !important;
+}
+
+.filter_Select .form-group {
+    margin-bottom: 15px;
+}
+
+.pno {
+    float: left;
+    width: 100%;
+    margin: 7px 0;
+}
+
+.pno p {
+    margin: 0 0 0 0;
+}
+
+.pno p span {
+    color: #777777;
+}
+
+.act_btn {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.act_btn .cart {
+    width: 50%;
+    float: left;
+    color: #1c438f;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.act_btn .bid {
+    width: 50%;
+    float: left;
+    color: #ff9a03;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.act_btn span {
+    float: left;
+    width: 100%;
+}

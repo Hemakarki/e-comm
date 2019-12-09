@@ -1,0 +1,23 @@
+.infodetail {
+    float: left;
+    width: 100%;
+    padding: 10px 10px;
+    line-height: 25px;
+}
+.tab-container .nav-item a.nav-link {
+    font-size: 20px;
+    color: #000;
+}
+.tab-container .nav-tabs > .active > a, .tab-container .nav-tabs > .active > a:hover, .tab-container .nav-tabs > .active > a:focus {
+    box-shadow: 0 -3px 0 #ff9900 inset;
+}
+.tab-container .nav > li > a, .tab-container .nav > li > a:focus, .tab-container .nav > li > a:hover, .nav > li > a.active {
+    border: none !important;
+    color: #000 !important;
+}
+
+@media (max-width:892px) {
+.tab-container .nav-item a.nav-link {
+    font-size: 17px;
+}
+}

@@ -1,0 +1,241 @@
+<!--Start Header -->
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="logo hideinmob">
+        <a [routerLink]="['/home']"><img src="../assets/images/logo.png" alt="PNO"></a>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="searchbox">
+          <div class="selectcat">
+            <div class="btn-group stecatdrop">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false"> {{ dropDownValue }} <i class="fa  fa-angle-down"></i> </button>
+              <ul class="dropdown-menu">
+                <li *ngFor="let item of dropDownList" (click)="this.dropDownValue = item.value"> {{item.value}} </li>
+              </ul>
+            </div>
+          </div>
+          <div class="srchbtn">
+            <button type="button" [routerLink]="['/search-results']" class="submit"><img
+                src="../assets/images/search_icon.png"></button>
+          </div>
+          <div class="srch">
+            <input type="text" class="" placeholder="Search Part">
+          </div>
+        </div>
+        <div class="pull-right smp" (click)="lgModal.show()">Search Products</div>
+      </div>
+
+      <!-- <div class="col-md-4  col-sm-4 pull-right hideinmob">
+        <a href="#"><img src="../assets/images/head_Add.png" alt="" class="img-responsive"></a>
+      </div> -->
+
+      <div class="col-md-4  col-sm-5  fullinmob toright">
+        <ul class="nav navbar-nav othlinks">
+          <li><span *ngIf="!token" class="" (click)="showModal()"> Account</span></li>
+          <!-- <li><a [routerLink]="['/myprofile']">My Profile</a></li>
+          <li><a>View Order</a></li> -->
+          <li class="mc-icon">
+            <a href="javascript:void(0)" class="my_cart"><img src="../assets/images/cart.png" alt="">
+              <span>13</span></a>
+          </li>
+          <li class="sltlng mc-icon">
+            <div class="btn-group stecatdrop">
+              <button type="button" class="btn btn-default btn-info dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"> {{ dropDownlanValue }} <i class="fa  fa-angle-down"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li *ngFor="let item of dropDownLang" (click)="this.dropDownlanValue = item.value"> {{item.value}} </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-sm-7">
+        <nav class="navbar navbar-default custom_nav">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle
+                navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                class="icon-bar"></span> </button>
+            <a class="navbar-brand hideinwebtab" href="#"><img src="../assets/images/logo.png" alt=""></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="dropdown stw"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                  aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Music & gaming</a></li>
+                  <li><a href="#">Sports & fitness</a></li>
+                  <li><a href="#">Home & kitchen</a></li>
+                </ul>
+              </li>
+              <!-- <li><a [routerLink]="['/buy-parts']">Buy Parts</a></li>
+              <li><a [routerLink]="['/sell-parts']" href="#">Sell Parts </a></li>
+              <li><a [routerLink]="['/buy-parts']">AOG</a></li> -->
+              <li><a href="#">Offers</a></li>
+              <li><a [routerLink]="['/aboutus']">About Us</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!--End Header -->
+
+
+
+<!--  login Modal -->
+
+<div *ngIf="isModalShown" [config]="{ show: true }" (onHidden)="onHidden()" bsModal #autoShownModal="bs-modal"
+  class="modal fade" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog login_popup">
+    <div class="modal-content ">
+      <div class="modal-body">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal()"> <span
+            aria-hidden="true">&times;</span> </button>
+        <div class="left_form">
+          <h4 class="modal-title" id="myModalabel">Login</h4>
+          <div class="row">
+            <app-loginmodal></app-loginmodal>
+            <div class="col-md-12 col-sm-12 text-center"> <a (click)="forgotPasswordModal()" href="javascript:void(0);"
+                class="forgot">Forgot Password ?</a> </div>
+            <div class="col-md-12 col-sm-12">
+              <p class="info">Don’t have an account ?
+                <button class="btnliketext" (click)="opensignup()">Create Now</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="right_content">
+          <h2>eSpares</h2>
+          <p>The eSpares Agents are standing by to help with your requirements!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  login Modal -->
+
+<!-- Sign Up Modal -->
+<div *ngIf="isSignupModalShown" [config]="{ show: true }" (onHidden)="onSignupHidden()" class="modal fade" bsModal
+  #signupModal="bs-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog login_popup">
+    <div class="modal-content ">
+      <div class="modal-body">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="hideSignupmodal()"> <span
+            aria-hidden="true">&times;</span> </button>
+        <div class="left_form">
+          <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+          <div class="row">
+            <app-signupmodal></app-signupmodal>
+            <div class="col-md-12 col-sm-12">
+              <p class="info">Already have an account ?
+                <button class="btnliketext" (click)="hideSignupmodal()">Login Now</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="right_content">
+          <h2>eSpares</h2>
+          <p>The eSpares Agents are standing by to help with your requirements!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sign Up Modal -->
+
+
+<!-- Forgot password -->
+
+<!-- Modal -->
+<form #forgotPasswordForm="ngForm" (ngSubmit)="onSubmit(forgotPasswordForm.value)" novalidate>
+
+  <div *ngIf="isForgotModalShown" [config]="{ show: true }" (onHidden)="onForgotHidden()" bsModal
+    #autoForgotShownModal="bs-modal" class="modal fade" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog"
+    aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog login_popup forgot_popup">
+      <div class="modal-content ">
+        <div class="modal-body">
+          <button type="button" class="close pull-right" aria-label="Close" (click)="hideForgotModal()"> <span
+              aria-hidden="true">&times;</span> </button>
+          <div class="left_form">
+            <h4 class="modal-title" id="myModalabel">Forgot Password</h4>
+
+            <div class="row">
+
+              <div *ngIf="data" class="alert alert-success" role="alert">
+                {{data.message}}
+              </div>
+              <div *ngIf="errors" class="alert alert-danger displaymessage" role="alert">
+                {{errors.message}}
+              </div>
+
+              <div class="col-md-12 col-sm-12">
+
+                <div class="form-group ">
+
+                  <div class="input-group"> <span class="input-group-addon"><img
+                        src="../../../assets/images/useremail.png" alt=""></span>
+                    <!-- <app-input [inputType]="'text'" [labelName]="'e-mail'" ></app-input> -->
+                    <input type="text" #emailRef="ngModel" placeholder="Email" [(ngModel)]="username" name="email"
+                      class="form-control csinput" required ngModel>
+                  </div>
+                  <span *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" class="error alert-danger">
+                    <span [hidden]="!emailRef.errors.required"> Please enter an Email. </span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12">
+                <input type="submit" [disabled]="!forgotPasswordForm.form.valid" class="login_btn btn action_btn"
+                  value="Recover Password">
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<!-- Forgot password -->
+
+
+<!-- Search Multiple Parts -->
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+
+  <div class="modal-dialog search_mutiple_popup">
+    <div class="modal-content ">
+      <div class="modal-body">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal()"> <span
+            aria-hidden="true">&times;</span> </button>
+        <h4 class="modal-title" id="myModalabel">Search for products</h4>
+
+        <app-search-multiple-parts></app-search-multiple-parts>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Search Multiple Parts -->

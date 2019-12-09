@@ -1,0 +1,16 @@
+<a (click)="menuOpen()" [ngClass]="{active: !activeMenu}" href="javascript:void(0);" class="menu_icon">
+  <img class="mn_icon" src="../assets/images/menu_icon.png" alt="" > <img class="cl_icon" src="../assets/images/close.png" alt="" >
+</a>
+<div class="sidebar" [ngClass]="{active: !activeMenu}">
+  <div class="profile_pic"> <img src="../../../assets/images/aviation_user.jpg" alt=""> </div>
+  <h1>Issad Rebrab</h1>
+  <ul>
+    <li><a [routerLink]="['/vendor-dashboard']" routerLinkActive="active"><i class="fa  fa-address-book"></i> Account Detail </a></li>
+    <li><a [routerLink]="['/vendor-bid']" routerLinkActive="active" ><i class="fa  fa-plane"></i> Bids <span class="total">4</span></a></li>
+    <li><a [routerLink]="['/product-sync']" routerLinkActive="active" ><i class="fa  fa-gavel"></i> Products Sync </a></li>
+    <li><a [routerLink]="['/place-ad']" routerLinkActive="active"  ><i class="fa  fa-heart "></i> Place Ads </a></li>
+    <li><a [routerLink]="['/']" ><i class="fa  fa-flag-o "></i> Cases View </a></li>
+    <li><a [routerLink]="['/offers-list']" routerLinkActive="active" ><i class="fa  fa-bullhorn "></i> Offers </a></li>
+    <li><a (click)="logout()" style="cursor: pointer;"><i class="fa fa-sign-out"></i>Logout</a></li>
+  </ul>
+</div>

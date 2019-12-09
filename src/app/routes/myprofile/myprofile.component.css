@@ -1,0 +1,103 @@
+.address {
+    background: #f6f6f5;
+    padding: 20px 20px 50px 20px;
+    float: left;
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+.address:hover {
+    box-shadow: 0 0 0 3px #ff9a03 inset;
+}
+.address h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+}
+.address p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 15px;
+}
+.block {
+    float: left;
+    width: 100%;
+    margin-bottom: 35px;
+}
+.ed_del {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 15px 15px;
+}
+.btn_inline {
+    background: #ff9a03 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 15px;
+    margin-left: 25px;
+    padding: 1px 15px;
+    text-align: center;
+}
+.userpic {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+}
+.userpic img {
+    width: 100%;
+}
+.csfileupload {
+    position: relative;
+    cursor: pointer;
+    margin: 20px 0 0 10px;
+    padding: 1px 10px;
+}
+.upbtn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.newadd {
+    display: none;
+}
+.newadd.active {
+    display: block;
+}
+.smshiping { font-size: 13px; }
+
+.savebtn {
+    background: #ff9a03 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    float: left;
+    font-size: 20px;
+    line-height: 45px;
+    margin: 10px 0;
+    padding: 0 30px;
+    width: auto !important;
+}
+
+/* Responsive CSS */
+
+@media (max-width:380px) {
+.splabel h4 {
+    margin-bottom: 20px;
+    width: 100%;
+}
+.btn_inline {
+    margin-left: 0;
+    width:100%; padding: 10px 0
+}
+}
+
+/* Responsive CSS */

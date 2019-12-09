@@ -1,0 +1,58 @@
+.billing {
+    background: none;
+    margin-bottom: 30px;
+}
+.billing .inner_hold {
+    background: #fff;
+    padding: 20px;
+    float: left;
+    width: 100%;
+    box-shadow: 0 0 7px -5px #000;
+}
+.heading h2 {
+    padding: 0 0 10px 0
+}
+
+
+.box{ float: left; width: 100%;}
+
+.box .hding { float: left; width:100%; margin-bottom:10px; } 
+
+.box .hding h3 { font-size:18px; color: #626262; float: left; margin: 0;}
+
+.box .hding span.edit{ float:right; color: #ff9900;}
+
+.selected_address { float:left; width:100%; background: #f7f7f7; padding: 20px; margin: 5px 0 20px 0; font-size: 18px; }
+
+.all_orders { float:left; width:100%;  margin: 5px 0 20px 0; }
+
+
+.all_orders .table{ margin-bottom:0; }
+
+.right { text-align: right; font-size: 15px; width:150px; }
+
+.center{ text-align: center;}
+
+.total_hglt{
+    float: left;
+    width:100%;
+    background: #f9f9f9;
+    border:1px solid #DDDDDD;
+    margin-top:-1px;
+    text-align: right; 
+}
+
+.total_hglt span{ width:150px; display: inline-block; }
+
+.ttx { float: left; width:100%; font-size: 15px; font-weight: 500; padding:10px 10px;   }
+
+.ttl { float: left; width:100%; font-size: 25px; font-weight: 500; padding: 0 10px;   }
+
+
+.select-method { float: left; width: 100%; padding: 0;   }
+
+
+
+
+
+

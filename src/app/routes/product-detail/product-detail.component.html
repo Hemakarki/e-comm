@@ -1,0 +1,259 @@
+
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">Home <i class="fa fa-angle-right"></i> Skytronics jasco. 6560-1 Alternator Kit</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Start Wrapper -->
+
+<section class="wrapper inner">
+  <div class="container pad_top_50">
+    <div class="row">
+     <div class="col-md-5 col-sm-6">
+    <!-- <ngx-gallery [options]="galleryOptions" [images]="galleryImages">
+    </ngx-gallery> -->
+      
+        <div class="big_pro_img ">
+        <!-- <img [imageZoom]="zoomedImageSrc" [src]="smallImageSrc" > -->
+          <!-- <img [imageZoom]="showImage" [src]="showImage" style="top: 0px" > -->
+          <img src=""  > 
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-3  col-xs-3" >
+            <div class="pro_sm_img" >
+              <img src="" style="width: 100%;height: 80px">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="pro_sm_img"><img  src="" style="width: 100%;height: 80px"></div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3" >
+            <div class="pro_sm_img"><img  src="" style="width: 100%;height: 80px"> </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="pro_sm_img"><img  src="" style="width: 100%;height: 80px"> </div>
+          </div>
+        </div>
+      </div> 
+      <!-- <div class="col-md-5 col-sm-6"> -->
+    <!-- <ngx-gallery [options]="galleryOptions" [images]="galleryImages">
+    </ngx-gallery> -->
+      
+        <!-- <div class="big_pro_img "> -->
+        <!-- <img [imageZoom]="zoomedImageSrc" [src]="smallImageSrc" > -->
+          <!-- <img [imageZoom]="showImage" [src]="showImage" style="top: 0px" > -->
+          <!-- <img src="http://localhost:1200/assets/images/DetailBigImage.jpg"  >  -->
+      <!--   </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-3  col-xs-3" *ngFor="let imgurl of imgArr">
+            <div class="pro_sm_img" >
+              <img (click)="changeImage(imgurl)" src="{{imgurl}}" style="width: 100%;height: 80px">
+            </div>
+          </div> -->
+          <!-- <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="pro_sm_img"><img  src="http://localhost:1200/assets/images/detail2.jpg" style="width: 100%;height: 80px"></div>
+          </div> -->
+         <!--  <div class="col-md-3 col-sm-3 col-xs-3" >
+            <div class="pro_sm_img"><img  src="http://localhost:1200/assets/images/detail3.jpg" style="width: 100%;height: 80px"> </div>
+          </div> -->
+          <!-- <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="pro_sm_img"><img  src="http://localhost:1200/assets/images/detail4.jpg" style="width: 100%;height: 80px"> </div>
+          </div> -->
+        <!-- </div>
+      </div>  -->
+      <div class="col-md-7 col-sm-6">
+        <p class="product_name" > SKYTRONICS JASCO. 6560-1 ALTERNATOR KIT</p>
+
+
+
+        <div class="bid_now_holder">
+
+
+          <div class="current_price">
+            <div class="wauto asking_price">
+              <label>Asking Price</label>
+              <h4>$5245.00</h4>
+            </div>
+            <div class="wauto highestbid">
+              <label>Highest Bid</label>
+              <h4>$5000.00</h4>
+            </div>
+            <div class="wauto timeleft">
+              <label>Bid Close In</label>
+              <h4>10d 15h 13min</h4>
+            </div>
+            <div class="btnhd">
+              <button type="button" class="bid_now" (click)='currentBid()' [ngClass]="{active: !activeBid}" > <img src="../../../assets/images/bid.png" alt=""> Bid Now </button>
+            </div>
+          </div>
+
+
+          <div class="currentbidnow" [ngClass]="{active: !activeBid}">
+            <div class="sel_quan_warhse">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-8 forcfull">
+                  <div class="form-group">
+                    <label>My Bid</label>
+                    <div class="input-group">
+                      <div class="input-group-addon">$</div>
+                      <input type="text" class="form-control" id="" placeholder="Enter bid price">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btnhd">
+              <button type="button" class="my_bid" > <img src="../../../assets/images/bid.png" alt=""> My Bid </button>
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div class="bid_now_holder">
+
+
+          <div class="current_price">
+            <div class="sel_quan_warhse">
+              <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-4 forcfull">
+                  <div class="form-group">
+                    <label>Select quantity</label>
+                    <select>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8 forcfull">
+                  <div class="form-group">
+                    <label>Select Warehouse</label>
+                    <select>
+                      <option>South Dakota, USA</option>
+                      <option>Aviation On Time, IND</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btnhd">
+              <button type="button" [routerLink]="['/billing-details']" class="addtocart"  > <img src="../../../assets/images/addtocart.png" alt=""> Add to Cart </button>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="out_of_stock">
+          <h3>Out of stock</h3>            
+        </div>
+
+
+        <div class="bid_now_holder">
+
+
+          <div class="current_price rfq">
+            <div class="sel_quan_warhse ">
+              <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4 forcfull">
+                  <div class="form-group">
+                    <label>Select quantity</label>
+                    <select>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8 forcfull">
+                  <div class="form-group">
+                    <label>Select Warehouse</label>
+                    <select>
+                      <option>South Dakota, USA</option>
+                      <option>Aviation On Time, IND</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btnhd">
+              <button type="button" class="addtocart" > <img src="../../../assets/images/addtocart.png" alt=""> Request for quote </button>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+
+        <div class="other_info">
+          <p> <span>OEM</span> <span>General Electric </span> </p>
+          <p> <span>OEM Part No</span> <span>234234 4354</span> </p>
+          <p> <span>Part No:</span> <span>SDG045303-54 </span> </p>
+          <p> <span>Condition:</span> <span>New </span> </p>
+        </div>
+        <p class="product_des" >Honeywell ED800 EFIS Display. Overhauled with a new CRT & in excellent condition. 8130 Tag Dated 05 June 2015 The unit is in our UK store and availble for immediate delivery. <a href="#">read more..</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <app-product-detail-tab></app-product-detail-tab>
+      </div>
+    </div>
+    <section class="pro_block">
+      <div class="heading insml">
+        <h2>Recently Viewed</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <app-slider></app-slider>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+<section class="wrapper inner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="allinfo" >
+          <h2>Customer Reviews</h2>
+          <div class="overall_rating">
+            <h3>{{averageRating}}</h3>
+            <span>{{totalRating}} Ratings, {{totalReview}} Reviews</span> </div>
+            <a href="javascript:void(0);" class="read_write" (click)="menuOpen()"  > <i class="fa  fa-edit"></i> Rate and Write your review </a>
+            <div class="write_review" [ngClass]="{active: !activeMenu}" >
+              <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"
+              (onHover)="hoveringOver($event)" (onLeave)="resetStar()"
+              [titles]="['one','two','three','four','five']"></rating>
+              <span class="cu_rating" >{{rate}} </span>
+              <div class="form-group">
+                <input type="text" value="" class="form-control" placeholder="Title" >
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" placeholder="Write your review..."></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Submit" class="submit_review" >
+              </div>
+            </div>
+            <div class="your_reviews">
+              <div class="review" *ngFor="let item of customerReview">
+                <p class="hdng"><span>{{item.commentRating}}</span> {{item.commentTitle}} <span class="by">( By {{item.userName}} on {{item.commentDate}} )</span></p>
+                <p>{{item.fullComment}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End Wrapper --> 
+

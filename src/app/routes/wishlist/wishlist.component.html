@@ -1,0 +1,91 @@
+<!--Start Wrapper -->
+
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">Home <i class="fa fa-angle-right"></i> My WishList</p>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="myaccount">
+  <div class="container ">
+    <div class="info_wrapper">
+      <app-user-sidebar-menu></app-user-sidebar-menu>
+     
+     <div class="rightbar">
+        <div class="heading">
+          <h2>My Wishlist</h2>
+        </div>
+          
+        <div class="row">
+            
+          <div class="col-md-12">
+              
+            <!--div class="wish_holder" *ngFor="let item of wishList" >
+                
+              <div class="product_image"><img src="{{item.procuctImage}}" alt=""></div>
+                
+              <div class="product_info">
+                <h2 >{{item.productName}}</h2>
+                <p class="product_price" >{{item.productPrice}}</p>
+                <p class="product_description">{{item.productDescription}}</p>
+                <p class="bid_time_left"> <span><img src="../../../assets/images/time_left.png" alt="" > </span> {{item.timeLeft}} </p>
+                <div class="row main_btn">
+                  <div class="col-md-4 col-sm-4  col-xs-6 full"> <a href="#" class="addtocart" > <span class=""> <img src="../../../assets/images/cart.png" alt="" ></span> Add to Cart</a> </div>
+                  <div class="col-md-4  col-sm-4 col-xs-6 full"><a href="#" class="bidnow"> <span class=""> <img src="../../../assets/images/bid.png" alt="" ></span> Bid Now</a> </div>
+                  <div class="col-md-4  col-sm-4 full"> <a href="#" class="remove"> <span class=""> <img src="../../../assets/images/delete.png" alt="" ></span> Remove Now</a> </div>
+                </div>
+              </div>
+                
+            </div-->
+              
+              
+              <div class="wish_holder" *ngFor="let item of wishList" >
+              <div class="product_image"><img src="{{item.procuctImage}}" alt=""></div>
+              <div class="product_info">
+                <h2 >{{item.productName}}</h2>
+                <div class="otinfo" >
+                  <p>OEM Part No: <span>4243-33</span></p>
+                  <p>Part No: <span>DGJ353-2</span></p>
+                  <p>Part Condition: <span>New</span></p>
+                  <p>Lead Time: <span>10days</span></p>
+                </div>
+                  
+                <div class="current_price">
+                  <div class="wauto asking_price">
+                    <label>Asking Price</label>
+                    <h4>{{item.productPrice}}</h4>
+                  </div>
+                  <div class="wauto highestbid">
+                    <label>Highest Bid</label>
+                    <h4>$5000.00</h4>
+                  </div>
+                  <div class="wauto timeleft">
+                    <label>Bid Close In</label>
+                    <h4>{{item.timeLeft}}</h4>
+                  </div>
+                </div>
+                  
+
+                  
+                <div class="row main_btn">
+                  <div class="col-md-4 col-sm-4  col-xs-6 "> <a href="#" class="addtocart" > <span class=""> <img src="../../../assets/images/addtocart_b.png" alt="" ></span> Add to Cart</a> </div>
+                  <div class="col-md-4  col-sm-4 col-xs-6 "><a href="#" class="bidnow"> <span class=""> <img src="../../../assets/images/bid_y.png" alt="" ></span> Bid Now</a> </div>
+                  <div class="col-md-4  col-sm-4 full"> <a href="#" class="remove"> <span class=""> <img src="../../../assets/images/delete.png" alt="" ></span> Remove Now</a> </div>
+                </div>
+              </div>
+            </div>
+              
+          </div>
+            
+        </div>
+          
+      </div>
+        
+        
+    </div>
+  </div>
+</section>
+<!--End Wrapper --> 

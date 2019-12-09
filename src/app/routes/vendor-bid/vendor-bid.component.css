@@ -1,0 +1,9 @@
+input.counterinput {
+    height:25px !important;
+    width: 80px;
+    text-align: center;
+    padding: 3px 8px
+}
+.outerb td { vertical-align: middle }
+
+.outerb td:hover { cursor: pointer}

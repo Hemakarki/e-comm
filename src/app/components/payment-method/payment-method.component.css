@@ -1,0 +1,64 @@
+.billing .form-control {
+    border: 1px solid #afafaf;
+    border-radius: 2px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 200;
+    height: 45px;
+}
+.billing .form-control:focus {
+    border: 1px solid #66afe9;
+}
+
+.infodetail { padding: 20px 0;}
+
+
+.infodetail label { font-size: 13px; color: #555555; font-weight: 300; }
+
+
+
+.confirm_payment {
+    background: #ff9a03 none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    float: left;
+    font-size: 22px;
+    line-height: 60px;
+    width: 100%;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+
+.paypal_btn{ width:300px; }
+
+.paypal_btn img{ width:100%; }
+
+
+.infodetail {
+    float: left;
+    width: 100%;
+    padding: 10px 10px;
+    line-height: 25px;
+}
+.tab-container .nav-item a.nav-link {
+    font-size: 20px;
+    color: #000;
+}
+.tab-container .nav-tabs > .active > a, .tab-container .nav-tabs > .active > a:hover, .tab-container .nav-tabs > .active > a:focus {
+    box-shadow: 0 -3px 0 #ff9900 inset;
+}
+.tab-container .nav > li > a, .tab-container .nav > li > a:focus, .tab-container .nav > li > a:hover, .nav > li > a.active {
+    border: none !important;
+    color: #000 !important;
+}
+
+
+
+
+
+@media (max-width:892px) {
+.tab-container .nav-item a.nav-link {
+    font-size: 17px;
+}
+}

@@ -1,0 +1,55 @@
+.billing {
+    background: none;
+    margin-bottom: 30px;
+}
+.billing .inner_hold {
+    background: #fff;
+    padding: 20px;
+    float: left;
+    width: 100%;
+}
+.heading h2 {
+    padding: 0 0 10px 0
+}
+.billing .form-control {
+    border: 1px solid #afafaf;
+    border-radius: 2px;
+    height: 45px;
+}
+.billing .csinput.form-control {
+    font-size: 16px;
+    font-weight: 200;
+    height: 45px;
+}
+.billing label {
+    color: #555555;
+    float: left;
+    font-size: 13px;
+    font-weight: 200;
+    width: 100%;
+}
+.billing .form-control:focus {
+    border: 1px solid #66afe9;
+}
+
+.ordnote { resize:vertical; min-height: 100px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

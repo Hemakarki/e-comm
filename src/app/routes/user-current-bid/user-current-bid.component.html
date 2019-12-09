@@ -1,0 +1,64 @@
+<!--Start Wrapper -->
+
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">Home <i class="fa fa-angle-right"></i> My Current Bids</p>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="myaccount">
+  <div class="container ">
+    <div class="info_wrapper">
+      <app-user-sidebar-menu></app-user-sidebar-menu>
+      <div class="rightbar">
+        <div class="heading">
+          <h2>My Current Bids</h2>
+        </div>
+        
+       <div class="clearfix"></div>
+            
+              <div class="table-responsive">
+            
+            <table class="table table-striped outerb">
+          <tr>
+            <th>Product Name</th>
+            <th>Part Number</th>
+            <th>Asking Price</th>
+            <th>Bid</th>
+            <th>View</th>
+          </tr>
+          <tr *ngFor="let item of bidInfo" > 
+            <td><a href="#">{{item.productName}}</a></td>
+            <td>{{item.partNumber}}</td>
+            <td>{{item.askingPrice}}</td>
+            <td>{{item.bidPrice}}  </td>  
+            <td><a href="#">View </a></td>
+          </tr>
+                
+         
+        </table>
+              
+        </div>
+          
+          
+       
+        
+        <nav aria-label="Page navigation"class="pull-right" >
+          <ul class="pagination">
+            <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+            <li class="active" ><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li> <a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Wrapper --> 

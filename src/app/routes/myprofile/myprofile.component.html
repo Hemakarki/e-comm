@@ -1,0 +1,487 @@
+<!--Start Wrapper -->
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="">Home <i class="fa fa-angle-right"></i> My Acccount</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="myaccount">
+  <div class="container ">
+    <div class="info_wrapper">
+      <app-user-sidebar-menu></app-user-sidebar-menu>
+      <div class="rightbar">
+        <div class="heading">
+          <h2>My Profile</h2>
+        </div>
+
+
+        <!-- Modal -->
+
+        <div *ngIf="imageUploadModalshown" [config]="{ show: true }" (onHidden)="onHidden()" bsModal
+          #autoShownModal="bs-modal" class="modal fade" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog"
+          aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog Image_popup">
+            <div class="modal-content ">
+              <div class="modal-body ">
+                <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal()"> <span
+                    aria-hidden="true">&times;</span> </button>
+                <div class="left_form">
+                  <h4 class="modal-title" id="myModalabel">Select Image</h4>
+
+                  <div class="row">
+                    <div>
+                      <input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
+                    </div>
+                    <div class="text-center">
+                      <button type="button" (click)="upload()">Upload</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <form #myprofileForm="ngForm" (ngSubmit)="onSubmit(myprofileForm.value)" novalidate>
+          <div *ngIf="userDetails">
+            <div class="block">
+              <div class="splabel">
+                <h4>Personal Details</h4>
+              </div>
+
+              <div class="row">
+
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <div class="userpic">
+                      <img [src]="src" alt="">
+                    </div>
+                    <div class="btn_inline csfileupload"> <span>Upload Picture</span>
+
+                      <!-- <input class="upbtn" type="file" ng2FileSelect name="user_img" accept="image/*" (change)="onChange($event)" imageUpload (imageSelected)="selected($event)" 
+                      [resizeOptions]="resizeOptions" /> -->
+                      <input class="upbtn" (click)="imageUploadModal()">
+                    </div>
+                  </div>
+                </div>
+
+                <toaster-container [toasterconfig]="toasterconfig"></toaster-container>
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <!-- <label class="center-block">Name:
+                 <input class="form-control" formControlName="name">
+               </label> -->
+                    <label>First Name</label>
+
+                    <input type="text" #fnameRef="ngModel" required class="form-control csinput" name="firstName"
+                      ngModel [(ngModel)]="userDetails.firstName">
+                    <span *ngIf="fnameRef.errors && (fnameRef.dirty || fnameRef.touched)" class="error alert-danger">
+                      <span [hidden]="!fnameRef.errors.required"> Please enter first name. </span>
+                    </span>
+                    <!-- <app-input [inputType]="'text'"  ></app-input> -->
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" #lnameRef="ngModel" required class="form-control csinput" name="lastName" ngModel
+                      [(ngModel)]="userDetails.lastName">
+                    <span *ngIf="lnameRef.errors && (lnameRef.dirty || lnameRef.touched)" class="error alert-danger">
+                      <span [hidden]="!lnameRef.errors.required"> Please enter last name. </span>
+                    </span>
+                    <!-- <app-input [inputType]="'text'" ></app-input> -->
+                  </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" #emailRef="ngModel" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                      name="email" class="form-control csinput" required ngModel [(ngModel)]="userDetails.email">
+                    <span *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" class="error alert-danger">
+                      <span [hidden]="!emailRef.errors.required"> Please enter email. </span>
+                      <span [hidden]="!emailRef.errors.pattern">Please enter a valid email address.</span>
+                    </span>
+                    <!-- <app-input [inputType]="'email'"  ></app-input> -->
+                  </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Password <a (click)="showModal()" href="javascript:void(0);" class="changepassword">Change
+                        Password </a></label>
+                    <!-- <a  class="change_password">Change Password</a> -->
+                    <input type="password" #passwordRef="ngModel" minlength="6" class="form-control csinput"
+                      name="password" [(ngModel)]="userDetails.password" disabled ngModel>
+                    <span *ngIf="passwordRef.errors && (passwordRef.dirty || passwordRef.touched)"
+                      class="error alert-danger">
+                      <span [hidden]="!passwordRef.errors.minlength">Password must be 6 characters long.</span>
+                    </span>
+                    <!-- <app-input [inputType]="'Password'" ></app-input> -->
+                  </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Phone </label>
+                    <!-- <app-input [inputType]="'text'" ></app-input> -->
+                    <input type="number" pattern="[0-9]{10}" #phoneRef="ngModel" class="form-control csinput"
+                      name="phone" [(ngModel)]="userDetails.mobile" ngModel>
+                    <span *ngIf="phoneRef.errors && (phoneRef.dirty || phoneRef.touched)" class="error alert-danger">
+                      <span [hidden]="!phoneRef.errors.pattern">Please enter a valid phone number(10 digits).</span>
+                    </span>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div ngModelGroup="address" #addressCtrl="ngModelGroup">
+              <div class="block" *ngIf="userDetails.address[0]">
+                <div class="splabel">
+                  <h4>Billing Details</h4>
+                </div>
+                <div class="row">
+
+                  <div class="col-md-4 col-sm-6">
+                    <div class="form-group">
+                      <label>Street Address</label>
+                      <input type="text" #streetRef="ngModel" required class="form-control csinput" name="streetname"
+                        ngModel [(ngModel)]="userDetails.address[0].street">
+                      <span *ngIf="streetRef.errors && (streetRef.dirty || streetRef.touched)"
+                        class="error alert-danger">
+                        <span [hidden]="!streetRef.errors.required"> Please enter street. </span>
+                      </span>
+                      <!-- <app-input [inputType]="'text'" ></app-input> -->
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6">
+                    <div class="form-group">
+                      <label>City</label>
+                      <input type="text" #cityRef="ngModel" required class="form-control csinput" name="cityname"
+                        ngModel [(ngModel)]="userDetails.address[0].city">
+                      <span *ngIf="cityRef.errors && (cityRef.dirty || cityRef.touched)" class="error alert-danger">
+                        <span [hidden]="!cityRef.errors.required"> Please enter city. </span>
+                      </span>
+                      <!-- <app-input [inputType]="'text'" ></app-input> -->
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4 col-sm-6">
+                    <div class="form-group">
+                      <label>Country</label>
+                      <select #countryRef="ngModel" required class="form-control" name="countryname" ngModel
+                        [(ngModel)]="userDetails.address[0].country">
+                        <option value="">select country</option>
+                        <option value="Australia">Australia</option>
+                        <option value="USA">USA</option>
+                        <option value="IND">IND</option>
+                      </select>
+                      <span *ngIf="countryRef.errors && (countryRef.dirty || countryRef.touched)"
+                        class="error alert-danger">
+                        <span [hidden]="!countryRef.errors.required"> Please select country. </span>
+                      </span>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4 col-sm-6">
+                    <div class="form-group">
+                      <label>State </label>
+                      <input type="text" #stateRef="ngModel" required class="form-control csinput" name="statename"
+                        ngModel [(ngModel)]="userDetails.address[0].state">
+                      <span *ngIf="stateRef.errors && (stateRef.dirty || stateRef.touched)" class="error alert-danger">
+                        <span [hidden]="!stateRef.errors.required"> Please enter state. </span>
+                      </span>
+                      <!-- <app-input [inputType]="'text'" ></app-input> -->
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4 col-sm-6">
+                    <div class="form-group">
+                      <label>Zip Code</label>
+                      <input type="number" #zipRef="ngModel" required class="form-control csinput" name="zip" ngModel
+                        [(ngModel)]="userDetails.address[0].zip">
+                      <span *ngIf="zipRef.errors && (zipRef.dirty || zipRef.touched)" class="error alert-danger">
+                        <span [hidden]="!zipRef.errors.required"> Please enter zip. </span>
+                      </span>
+                      <!-- <app-input [inputType]="'text'" ></app-input> -->
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4 col-sm-6">
+                    <div class="form-group">
+                      <label>Phone (Alternate)</label>
+                      <input type="number" pattern="[0-9]{10}" #phoRef="ngModel" class="form-control csinput"
+                        name="phone" ngModel [(ngModel)]="userDetails.address[0].phone">
+                      <span *ngIf="phoRef.errors && (phoRef.dirty || phoRef.touched)" class="error alert-danger">
+                        <span [hidden]="!phoRef.errors.pattern">Please enter a valid phone number (10 digits).</span>
+                      </span>
+                      <!-- <app-input [inputType]="'text'"></app-input> -->
+                    </div>
+                  </div>
+
+                  <div ngModelGroup="shippingAddress" #shippingCtrl="ngModelGroup">
+                    <div class="col-md-12 col-sm-12" *ngIf="addressCtrl.valid">
+                      <div class="form-group ">
+                        <label class="smshiping">
+                          <input Type="checkbox" id="isCheckBox" name="shippingAddress"
+                            (change)="check(!markShippingDetail)" [checked]="markShippingDetail">
+                          Mark same as Shipping Details </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <input type="submit" [disabled]="myprofileForm.invalid" class="savebtn btn action_btn"
+                      value="submit Details">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <!--  submit button and close form -->
+        <div class="block">
+          <div class="splabel">
+            <h4>Shipping Details</h4>
+            <button class="btn_inline" (click)="addAddress()"> Add new address</button>
+          </div>
+          <div class="row" *ngIf="userDetails.shippingaddress">
+
+            <div class="col-md-4 col-sm-4" *ngFor="let addressdetail of userDetails.shippingaddress; let i=index;">
+              <div class="address">
+                <h3>{{addressdetail.fullName}}</h3>
+                <p>Street : {{addressdetail.street}}</p>
+                <p>City : {{addressdetail.city}}</p>
+                <p>State : {{addressdetail.state}}&ensp;Zip:{{addressdetail.zip}}</p>
+                <p>Country : {{addressdetail.country}}</p>
+                <p>Phone : {{addressdetail.phone}}</p>
+                <div class="ed_del">
+                  <button class="btnliketext pull-left" (click)="updateAddress(i)"> <img src="./assets/images/edit.png"
+                      alt=""></button>
+                  <button class="btnliketext pull-right" (click)="removeAddress(i)"> <img src="./assets/images/del.png"
+                      alt=""></button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <form #addAddressForm="ngForm" *ngIf="showForm" (ngSubmit)="addnewAddress(addAddressForm.value)" novalidate>
+          <div ngModelGroup="shippingAddress2" #userCtrl="ngModelGroup">
+            <div class="block newadd" [ngClass]="{active: !activeMenu}">
+              <div class="splabel">
+                <h4>Add New Address</h4>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" #fullnameRef="ngModel" required class="form-control csinput" name="fullName"
+                      [(ngModel)]="addressInfo.fullName">
+                    <span *ngIf="fullnameRef.errors && (fullnameRef.dirty || fullnameRef.touched)"
+                      class="error alert-danger">
+                      <span [hidden]="!fullnameRef.errors.required"> Please enter full name. </span>
+                    </span>
+                    <!-- <app-input [inputType]="'text'" ></app-input> -->
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Street Address</label>
+                    <input type="text" #sRef="ngModel" required class="form-control csinput" name="street"
+                      [(ngModel)]="addressInfo.street">
+                    <span *ngIf="sRef.errors && (sRef.dirty || sRef.touched)" class="error alert-danger">
+                      <span [hidden]="!sRef.errors.required"> Please enter street. </span>
+                    </span>
+                    <!-- <app-input [inputType]="'text'" ></app-input> -->
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>City</label>
+                    <input type="text" #cRef="ngModel" required class="form-control csinput" name="city"
+                      [(ngModel)]="addressInfo.city">
+                    <span *ngIf="cRef.errors && (cRef.dirty || cRef.touched)" class="error alert-danger">
+                      <span [hidden]="!cRef.errors.required"> Please enter city. </span>
+                    </span>
+                    <!-- <app-input [inputType]="'text'" ></app-input> -->
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Country</label>
+                    <select #CountryRef="ngModel" required class="form-control" name="country"
+                      [(ngModel)]="addressInfo.country">
+                      <option value="">select country</option>
+                      <option value="Australia">Australia</option>
+                      <option value="USA">USA</option>
+                      <option value="IND">IND</option>
+                    </select>
+                    <span *ngIf="CountryRef.errors && (CountryRef.dirty || CountryRef.touched)"
+                      class="error alert-danger">
+                      <span [hidden]="!CountryRef.errors.required"> Please select country. </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>State </label>
+                    <input type="text" #stRef="ngModel" required class="form-control csinput" name="state"
+                      [(ngModel)]="addressInfo.state">
+                    <span *ngIf="stRef.errors && (stRef.dirty || stRef.touched)" class="error alert-danger">
+                      <span [hidden]="!stRef.errors.required"> Please enter state. </span>
+                    </span>
+                    <!-- <app-input [inputType]="'text'" ></app-input> -->
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Zip Code</label>
+                    <!-- <app-input [inputType]="'text'" ></app-input> -->
+                    <input type="number" #zRef="ngModel" required class="form-control csinput" name="zip"
+                      [(ngModel)]="addressInfo.zip">
+                    <span *ngIf="zRef.errors && (zRef.dirty || zRef.touched)" class="error alert-danger">
+                      <span [hidden]="!zRef.errors.required"> Please enter zip. </span>
+                    </span>
+                  </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label>Phone</label>
+                    <input type="number" pattern="[0-9]{10}" #phRef="ngModel" class="form-control csinput" name="phone"
+                      [(ngModel)]="addressInfo.phone">
+                    <span *ngIf="phRef.errors && (phRef.dirty || phRef.touched)" class="error alert-danger">
+                      <span [hidden]="!phRef.errors.pattern">Please enter a valid phone number (10 digits).</span>
+                    </span>
+                    <!-- <app-input [inputType]="'text'" ></app-input> -->
+                  </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <input type="submit" [disabled]="! addAddressForm.form.valid" class="login_btn full btn action_btn"
+                      value="{{editAddress?'Update':'Save'}} Address">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Wrapper -->
+
+<!-- change passwordmodal -->
+
+<!-- Modal -->
+<form #changePasswordForm="ngForm" (ngSubmit)="changePassword(changePasswordForm.value)" novalidate>
+
+  <div *ngIf="isModalShown" [config]="{ show: true }" (onHidden)="onHidden()" bsModal #autoShownModal="bs-modal"
+    class="modal fade" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog login_popup forgot_popup change_popup">
+      <div class="modal-content ">
+        <div class="modal-body ">
+          <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal()"> <span
+              aria-hidden="true">&times;</span> </button>
+          <div class="left_form">
+            <h4 class="modal-title" id="myModalabel">Change Password</h4>
+
+            <div class="row">
+              <div *ngIf="success" class="alert alert-success" role="alert">
+                {{message}}
+              </div>
+              <!-- <div *ngIf="errors" class="alert alert-danger displaymessage" role="alert">
+            {{error}}
+          </div> -->
+              <div class="col-md-12 col-sm-12">
+                <div class="form-group ">
+                  <div class="input-group"> <span class="input-group-addon"><img
+                        src="../../../assets/images/password.png" alt=""></span>
+                    <!-- <app-input [inputType]="'text'" [labelName]="'e-mail'" ></app-input> -->
+                    <input type="password" #passwordRef="ngModel" placeholder="Current Password" ngModel
+                      name="oldpassword" class="form-control csinput" required="">
+                  </div>
+                  <span *ngIf="passwordRef.errors && (passwordRef.dirty || passwordRef.touched)"
+                    class="error alert-danger">
+                    <span [hidden]="!passwordRef.errors.required">Please enter your current password</span>
+                  </span>
+                  <span *ngIf="errors" class="error alert-danger">{{error}}</span>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12">
+                <div class="form-group ">
+                  <div class="input-group">
+                    <span class="input-group-addon"><img src="../../../assets/images/password.png" alt="">
+                    </span>
+                    <input type="password" placeholder="New Password" #newpassword="ngModel"
+                      pattern="((?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16})" name="newpassword"
+                      class="form-control csinput" required minlength="8" (keyup)="checkpwd(changePasswordForm.value)"
+                      ngModel>
+                  </div>
+                  <span *ngIf="newpassword.errors && (newpassword.dirty || newpassword.touched)"
+                    class="error alert-danger">
+                    <span [hidden]="!newpassword.errors.required">Please enter your new password</span>
+                    <span [hidden]="!newpassword.errors.pattern && !newpassword.errors.minlength">example :
+                      abcd@123(more than 8 characters)</span><br>
+                    <!-- <span [hidden]="!newpassword.errors.minlength">Password must be 8 characters long</span> -->
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12">
+                <div class="form-group ">
+                  <div class="input-group">
+                    <span class="input-group-addon"><img src="../../../assets/images/password.png" alt="">
+                    </span>
+                    <input type="password" placeholder="Confirm Password" #confpassword="ngModel" name="confpassword"
+                      class="form-control csinput" required (keyup)="checkpwd(changePasswordForm.value)" ngModel>
+                  </div>
+                  <span *ngIf="confpassword.errors && (confpassword.dirty || confpassword.touched)"
+                    class="error alert-danger">
+                    <span [hidden]="!confpassword.errors.required">Please enter your again new password</span>
+                  </span>
+                  <span *ngIf='msg'>{{msg}}</span>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12">
+                <input type="submit" [disabled]="!changePasswordForm.form.valid " class="login_btn btn action_btn"
+                  value="Recover Password">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<!-- end change password -->

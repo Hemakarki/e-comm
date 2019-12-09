@@ -1,0 +1,72 @@
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm.value)" novalidate>
+  <div *ngIf="data" class="alert alert-success displaymessage" role="alert">
+    {{data.message}}
+  </div>
+  <div *ngIf="errors" class="alert alert-danger displaymessage"  role="alert">
+    {{errors.message}}
+  </div>
+  <div ngModelGroup="registeredInfo" #registerCtrl="ngModelGroup">
+    <div class="col-md-6 col-sm-6">
+      <a href="" class="gle scbtn"> <i class="fa fa-google "></i> Google </a>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <a href="" class="fb scbtn"> <i class="fa fa-facebook"></i> Facebook </a>
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <div class="form-group ">
+        <div class="input-group"> <span class="input-group-addon"><img src="../../../assets/images/username.png" alt=""></span>
+          <!-- <app-input [inputType]="'text'" [labelName]="'Username'" ></app-input>     -->
+          <input type="text" #usernameRef="ngModel" minlength="4" placeholder="Username" required class="form-control csinput" name="username"
+          ngModel>
+        </div>
+        <span *ngIf="usernameRef.errors && (usernameRef.dirty || usernameRef.touched)" class="error alert-danger">
+         <span [hidden]="!usernameRef.errors.required"> Please enter a User Name. </span>
+         <span [hidden]="!usernameRef.errors.minlength">User Name must be atleast 4 characters.</span>
+       </span>
+     </div>
+   </div>
+   <div class="col-md-12 col-sm-12">
+    <div class="form-group ">
+      <div class="input-group"> <span class="input-group-addon"><img src="../../../assets/images/useremail.png" alt=""></span>
+        <!-- <app-input [inputType]="'text'" [labelName]="'Email'" ></app-input>  -->
+        <input type="email" #emailRef="ngModel" placeholder="Email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required
+        class="form-control csinput" name="email" ngModel>
+      </div>
+      <span *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" class="error alert-danger">
+       <span [hidden]="!emailRef.errors.required"> Please enter email. </span>
+       <span [hidden]="!emailRef.errors.pattern">Please enter a valid email address.</span>
+     </span>
+   </div>
+ </div>
+ <div class="col-md-12 col-sm-12">
+  <div class="form-group ">
+    <div class="input-group"> <span class="input-group-addon"><img src="../../../assets/images/fhone.png" alt=""></span>
+      <!-- <app-input [inputType]="'text'" [labelName]="'Mobile (optional)'" ></app-input> -->
+      <input minlength="10" maxlength="12" required type="number" #phoneRef="ngModel" placeholder="Phone Number" class="form-control csinput" name="mobile" ngModel pattern="^[0-9]+$">
+    </div>
+    <span *ngIf="phoneRef.errors && (phoneRef.dirty || phoneRef.touched)" class="error alert-danger">
+      <span [hidden]="!phoneRef.errors.pattern">Please enter a valid phone number.</span>
+      <span [hidden]="!phoneRef.errors.minlength">Number must be 10 digits long</span>
+      <span [hidden]="!phoneRef.errors.required">Please enter phone number</span>
+    </span>
+  </div>
+</div>
+<div class="col-md-12 col-sm-12">
+  <div class="form-group ">
+    <div class="input-group"> <span class="input-group-addon"><img src="../../../assets/images/password.png" alt=""></span>
+      <!-- <app-input [inputType]="'password'" [labelName]="'Password'" ></app-input> -->
+      <input type="password" #passwordRef="ngModel" pattern="((?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16})" placeholder="Password" required class="form-control csinput" name="password" minlength="8" 
+      ngModel>
+    </div>
+    <span *ngIf="passwordRef.errors && (passwordRef.dirty || passwordRef.touched)" class="error alert-danger">
+      <span [hidden]="!passwordRef.errors.required">Please enter Password.</span>
+      <span [hidden]="!passwordRef.errors.pattern">example : abcd@123</span>
+      <span [hidden]="!passwordRef.errors.minlength">Password must be 8 characters long</span>
+    </span>
+  </div>
+</div>
+<div class="col-md-12 col-sm-12">
+  <input type="submit" [disabled]="!registerForm.form.valid" class="login_btn full btn action_btn"  value="Sign Up" >
+</div>
+</div>
+</form>
